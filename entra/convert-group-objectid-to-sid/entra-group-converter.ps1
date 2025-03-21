@@ -1,16 +1,30 @@
 <#
-    .SYNOPSIS 
-    Converts between Entra Group ObjectID and SID
+.SYNOPSIS
+   Quickly convert a Entra Group ObjectID to a SID or a SID to a Entra Group ObjectID.
 
-    .DESCRIPTION
-    Use this script to convert between Entra Group ObjectID and SID.
-    Sample usage is .\entra-group-converter.ps1 -direction XXXX -id XXXX
-    
-    .ENVIRONMENT
-    PowerShell 5.0
-    
-    .AUTHOR
-    Niklas Rast
+.DESCRIPTION
+   Convert a Entra Group ObjectID to a SID or a SID to a Entra Group ObjectID.
+   Enter the Entra Group ObjectID or SID and the direction you want to convert.
+
+.PARAMETER -direction
+   Define if you want to convert a Entra Group ObjectID to a SID or a SID to a Entra Group ObjectID.
+   Valid values are "Object-to-Sid" and "Sid-to-Object".
+
+.PARAMETER -id 
+   Enter the Entra Group ObjectID or SID.
+
+.PARAMETER -Verbose
+   Enable verbose output.
+
+.EXAMPLE
+   .\entra-group-converter.ps1 -direction Object-to-Sid -id XXXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXX
+   .\entra-group-converter.ps1 -direction Sid-to-Object -id S-1-12-X-X-XXXXXX
+
+.LINK
+   https://github.com/niklasrst/graph-scripts/tree/main/helpers/dev-pki
+
+.AUTHOR
+   Niklas Rast
 #>
 
 param (
