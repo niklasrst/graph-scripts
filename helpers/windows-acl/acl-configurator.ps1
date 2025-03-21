@@ -61,7 +61,7 @@ param
     [Parameter(Mandatory=$false, HelpMessage='Define the action to perform')]
     [ValidateSet("Allow", "Deny")]
     [string]$action = "",
-    [Parameter(Mandatory=$true, HelpMessage='Specify the username which should start with domain\\ or azuread\\')]
+    [Parameter(Mandatory=$true, HelpMessage='Specify the username which should start with domain\ or azuread\')]
     [string]$username,
     [Parameter(Mandatory=$true, HelpMessage='Specify whether to add or remove the ACL rule')]
     [ValidateSet("Add", "Remove")]
