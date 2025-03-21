@@ -1,3 +1,29 @@
+<#
+.SYNOPSIS
+   Update the GroupTag for Windows Autopilot devices in bulk.
+
+.DESCRIPTION
+    This script allows you to bulk change the GroupTag for Windows Autopilot devices.
+
+.PARAMETER -oldGroupTag
+    Define the old GroupTag that you want to change.
+
+.PARAMETER -newGroupTag
+    Define the new GroupTag.
+
+.PARAMETER -Verbose
+   Enable verbose output.
+
+.EXAMPLE
+   .\bulk-change-autopilot-grouptag.ps1 -oldGroupTag "GroupTag1" -newGroupTag "GroupTag2"
+
+.LINK
+   https://github.com/niklasrst/graph-scripts/tree/main/helpers/intune/windows-autopilot-grouptag-change
+
+.AUTHOR
+   Niklas Rast
+#>
+
 param (
     [Parameter(Mandatory=$true, HelpMessage='Enter the old GroupTag that you want to change')]
     [string]$oldGroupTag,
